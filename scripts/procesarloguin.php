@@ -1,5 +1,5 @@
 <?php
-require 'conecion.py';
+require 'conecion.php';
     $nus=$_POST['username'];
     $pas=$_POST['pas'];
     $sql = "SELECT dni, pas FROM usuarios WHERE dni = :dni";

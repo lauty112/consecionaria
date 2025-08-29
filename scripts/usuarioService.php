@@ -1,15 +1,15 @@
 <?php
-require_once __DIR__ . '/conecion.py';
+require_once __DIR__ . '/coneccion.php';
 
 function cargarUsuarios() {
     global $pdo;
-    $stmt = $pdo->query('SELECT correoElectronico, nombre, apellido, dni FROM usuarios');
+    $stmt = $pdo->query('SELECT correoelectronico, nombre, apellido, dni FROM usuarios');
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function obtenerUsuario($correo) {
     global $pdo;
-    $stmt = $pdo->prepare('SELECT correoElectronico, nombre, apellido, dni, pas FROM usuarios WHERE correoElectronico = ?');
+    $stmt = $pdo->prepare('SELECT correoelectronico, nombre, apellido, dni, pas FROM usuarios WHERE correoElectronico = ?');
     $stmt->execute([$correo]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }

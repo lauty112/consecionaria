@@ -1,5 +1,5 @@
 <?php
-require 'conecion.py';
+require 'coneccion.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nombre = $_POST['nombre'];

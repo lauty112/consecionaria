@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/conecion.py';
+require_once __DIR__ . '/coneccion.php';
 
 function cargarVehiculos() {
     global $pdo;
